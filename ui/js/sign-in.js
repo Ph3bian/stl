@@ -10,11 +10,13 @@ const Url= 'https://stack-o-lite.herokuapp.com/api/v1/auth/login';
     }
     )
 .then(response=>{
-  console.log(response);
-  if(response.data.status== 200){
-    window.location.href='dashboard.html'
+  if(response.data.status== 'success'){
+     localStorage.setItem('token', response.data.data.token)
+     window.location='dashboard.html';
   }
 }).catch(error=>{
-  console.log(error);
+  console.log(error, "heree", error.data, error.status);
+  const errorMessage="Invalid email or password";
+  window.alert(errorMessage);
 })
 }
