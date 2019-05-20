@@ -1,8 +1,6 @@
 let data = {};
-
- console.log("got heresirrr!!!")
+const errorMessage = document.getElementById('error-message')
 const submitForm=()=>{
-  console.log("got here!!!")
 data.firstName = document.getElementById('firstName').value;
 data.lastName = document.getElementById('lastName').value;
 data.email = document.getElementById('email').value;
@@ -17,10 +15,11 @@ const Url= 'https://stack-o-lite.herokuapp.com/api/v1/auth/signup';
     )
 .then(response=>{
   console.log(response);
-  if(response.data.status== 201){
-    window.location.href='dashboard.html'
+  if(response.data.status== 'success'){
+    localStorage.setItem('token', response.data.data.token)
+    window.location='dashboard.html'
   }
 }).catch(error=>{
-  console.log(error);
+errorMessage.innerText=error.message;
 })
 }

@@ -22,7 +22,9 @@ background-size: contain;}
 .auto {
     flex: auto;
 }
-
+.error-message{
+    color:#ff0000
+}
 /***** nav-bar styling ****/
 
 nav {position: relative;height: 50px;}
