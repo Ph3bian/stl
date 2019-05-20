@@ -1,7 +1,7 @@
 let questionCard = document.getElementById('question-card');
 let alertTitle = document.querySelector('.alertTitle');
 
-const url = 'http://stack-o-lite.herokuapp.com/api/v1/'
+const url = 'https://stack-o-lite.herokuapp.com/api/v1/'
 
 
 // get all parties
