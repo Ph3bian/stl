@@ -12,7 +12,7 @@ const Url= 'https://stack-o-lite.herokuapp.com/api/v1/auth/login';
 .then(response=>{
   console.log(response);
   if(response.data.status== 200){
-    window.location.href='./dashboard.html'
+    window.location.href='dashboard.html'
   }
 }).catch(error=>{
   console.log(error);
