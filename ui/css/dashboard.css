@@ -1,0 +1,26 @@
+body{
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+#question-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card{
+  /* align-self:  */
+  background: white;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 60%;
+  padding: 15px;
+  box-shadow: 0 2px 15px 1px rgba(0,0,0,0.12);
+}
